@@ -1,0 +1,24 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    {% if banner %}
+      <img src="{{ banner }}" alt="{{ title }}" />
+    {% endif %}
+    {{ content | safe }}
+    <hr />
+    {% if collections.work %}
+        <div class="row">
+        {% for item in collections.work %}
+            <article class="card" href="{{item.url}}">
+                <img src="{{ item.data.banner }}" class="card-img-top" alt="{{ item.data.title }}">
+                <div class="card-body text-left">
+                    <h2 class="card-title font-weight-light"><a class="col mb-3 text-decoration-none" href="{{ item.url }}">{{ item.data.title }}</a></h2>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </article>
+        {% endfor %}
+        </div>
+    {% endif %}
+
+{% endblock content %}
