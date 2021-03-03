@@ -1,0 +1,20 @@
+{
+    "items": [
+        {
+            "text": "Over mij",
+            "url": "#"
+        },
+        {
+            "text": "Werk",
+            "url": "/werk/"
+        },
+        {
+            "text": "Ervaring",
+            "url": "#"
+        },
+        {
+            "text": "Contact",
+            "url": "#"
+        }
+    ]
+}
