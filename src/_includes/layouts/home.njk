@@ -1,17 +1,7 @@
 {% extends 'layouts/base.njk' %}
 
 {% block content %}
-    <h1>{{title}}</h1>
-    {% if banner %}
-      <img src="{{ banner }}" alt="{{ title }}" />
-    {% endif %}
-    {% if tags %}
-      <ul class="tags">
-        {% for item in tags %}
-          <li class="badge badge-dark">{{ item }}</li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+    {% include "partials/hero.njk" %}
     <hr />
     {{ content | safe }}
 {% endblock content %}
