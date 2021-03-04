@@ -1,0 +1,35 @@
+<ol class="entry-list">
+{% for entry in entries %}
+    <li class="h-event {% if microformat %}{{ microformat }}{% endif %}">
+        <article class="entry h-resume">
+            <div class="entry__header">
+                <h3 class="p-name">{{ entry.title }}</h3>
+                <p class="entry__date">
+                    <time class="dt-start" datetime="{{ entry.start | dateDisplay('yyyy-MM-dd') }}">
+                    {{ entry.start | dateDisplay('MM/yyyy') }}
+                    </time>
+                    <span>&ndash;</span>
+                    {% if entry.end %}
+                    <time class="dt-end" datetime="{{ entry.end | dateDisplay("yyyy-MM-dd") }}">
+                        {{ entry.end | dateDisplay("MM/yyyy") }}
+                    </time>
+                    {% else %}
+                    <span>Heden</span>
+                    {% endif %}
+                </p>
+                <p class="entry__organisation p-org h-card">
+                    {% if entry.organisationUrl %}
+                    <a href="{{ entry.organisationUrl }}" class="p-name u-url">{{ entry.organisation }}</a>
+                    {% else %}
+                    <span class="p-name">{{ entry.organisation }}</span>
+                    {% endif %}
+                    {% if entry.location %}
+                    <span aria-hidden="true">&middot;</span>
+                    <span class="p-location">{{ entry.location }}</span>
+                    {% endif %}
+                </p>
+            </div>
+        </article>
+    </li>
+{% endfor %}
+</ol>
