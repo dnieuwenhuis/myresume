@@ -1,0 +1,9 @@
+<span class="star-rating">
+    {%- for i in range(0, 5) %}
+        {%- if loop.index <= item.score -%}
+        <span class="star-rating__star -is-rated"></span>
+        {%- else -%}
+        <span class="star-rating__star"></span>
+        {%- endif -%}
+    {%- endfor -%}
+</span>

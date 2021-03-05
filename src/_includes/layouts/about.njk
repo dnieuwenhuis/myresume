@@ -1,0 +1,55 @@
+{% extends 'layouts/base.njk' %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+{% block content %}
+    <article>
+        {% include "partials/page-header.njk" %}
+
+        {% if skills %}
+        <section>
+            {% if skills.design %}
+            <h2>{{ skills.design.title }}</h2>
+            <ol>
+                {% for item in skills.design.items %}
+                <li>
+                    <span>{{ item.title }}</span>
+                    {% include "partials/rating-stars.njk" %}
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+            {% if skills.web %}
+            <h2>{{ skills.web.title }}</h2>
+            <ol>
+                {% for item in skills.web.items %}
+                <li>
+                    <span>{{ item.title }}</span>
+                    {% include "partials/rating-stars.njk" %}
+                </li>
+                {% endfor %}
+            </ol>
+            {% endif %}
+        </section>
+        {% endif %}
+
+        {% if experience %}
+        <section class="">
+            <h2>Werkervaring</h2>
+            {% set entries = experience %}
+            {% set microformat = "p-experience" %}
+            {% include "partials/entry-list.njk" %}
+        </section>
+        {% endif %}
+
+        {% if education %}
+        <section class="">
+            <h2>Opleidingen</h2>
+            {% set entries = education %}
+            {% set microformat = "p-education" %}
+            {% include "partials/entry-list.njk" %}
+        </section>
+        {% endif %}
+    </article>
+{% endblock content %}
