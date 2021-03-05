@@ -11,11 +11,11 @@
                 <span aria-hidden="true" class="line"></span>
             </button>
             <ol id="drawer" class="nav__list">
-            {% for item in navigation.items %}
+            {%- for item in navigation.items %}
                 <li>
-                    <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+                    <a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}> {{ item.text }}</a>
                 </li>
-            {% endfor %}
+            {%- endfor %}
             </ol>
         </nav>
     </div>
