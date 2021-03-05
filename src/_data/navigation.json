@@ -2,11 +2,7 @@
     "items": [
         {
             "text": "Over mij",
-            "url": "#"
-        },
-        {
-            "text": "Ervaring en opleiding",
-            "url": "/ervaring/"
+            "url": "/over-mij/"
         },
         {
             "text": "Werk",
