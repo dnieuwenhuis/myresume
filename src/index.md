@@ -1,8 +1,8 @@
 ---
 layout: layouts/home.njk
-title: Hello world
+title: Hoi, ik ben
+subtitle: Visual Designer
 banner: https://placeimg.com/1000/480/nature
-tags: [intro, random, gif]
 ---
 
 # Welcome to the awesome-resume
