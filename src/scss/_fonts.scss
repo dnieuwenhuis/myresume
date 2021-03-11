@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik Regular'), local('Rubik-Regular'),
+		url('../fonts/rubik-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/rubik-v12-latin-regular.woff') format('woff'); /* Modern Browsers */
+	font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Rubik Bold'), local('Rubik-Bold'),
+		url('../fonts/rubik-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/rubik-v12-latin-700.woff') format('woff'); /* Modern Browsers */
+	font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab'), local('Roboto-Slab'),
+		url('../fonts/roboto-slab-v13-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/roboto-slab-v13-latin-700.woff') format('woff'); /* Modern Browsers */
+	font-display: swap;
+}

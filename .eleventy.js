@@ -4,6 +4,8 @@ module.exports = (eleventyConfig) => {
 
     eleventyConfig.addWatchTarget("./src/scss/");
 
+    eleventyConfig.addPassthroughCopy("./src/fonts")
+
     return {
         dir: {
             input: 'src',

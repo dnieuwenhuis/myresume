@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     {% include "partials/meta-info.njk" %}
+
+    <link rel="preload" href="{{ '/fonts/rubik-v12-latin-regular.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/fonts/rubik-v12-latin-700.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/fonts/roboto-slab-v13-latin-700.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" href="{{ '/css/screen.css' | url }}" />
 </head>
 <body>

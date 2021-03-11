@@ -1,5 +1,7 @@
-// config and functions
+// config and tools
+@import 'fonts';
 @import 'config';
+@import 'tools';
 
 // reset
 @import 'reset';
@@ -7,8 +9,25 @@
 // Global styles start
 
 body {
-  background: white;
-  color: black;
+  background: get-color('white');
+  color: get-color('black');
   line-height: 1.5;
-  font-size: 1em;
+  font-size: get-size('400');
+  font-family: $font-base;
 }
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  font-family: $font-sans;
+}
+
+// Import blocks
+@import 'blocks/site-head';
+@import 'blocks/nav';
+@import 'blocks/button';
+
+// Import utilities
+@import 'utils/container';
+@import 'utils/visually-hidden'

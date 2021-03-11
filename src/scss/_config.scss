@@ -1,0 +1,61 @@
+/**
+ * BASE SIZE
+ * All calculations are based on this. It’s recommended that
+ * you keep it at 1rem because that is the root font size. You
+ * can set it to whatever you like and whatever unit you like.
+ */
+
+$base-size: 1rem;
+
+/**
+ * COLORS
+ * Colors are shared between backgrounds and text by default.
+ * You can also use them to power borders, fills or shadows, for example.
+ */
+$colors: (
+    "primary": #2b527d,
+    "secondary": #f0ae00,
+    "black": #000000,
+    "white": #FFFFFF
+);
+
+/**
+ * SIZE SCALE
+ * This is a major third scale that powers all the utilities that
+ * it is relevant for (font-size, margin, padding). All items are
+ * calcuated off the base size, so change that and cascade across
+ * your whole project.
+ */
+$sizes: (
+    "100": $base-size * 0.152,      // 8px
+    "200": $base-size * 0.64,       // 10px
+    "300": $base-size * 0.8,        // 12px
+    "400": $base-size,              // 16px
+    "500": $base-size * 1.25,       // 20px
+    "600": $base-size * 1.563,      // 25px
+    "700": $base-size * 1.953,      // 31px
+    "800": $base-size * 2.441,      // 39px
+    "900": $base-size * 3.052,      // 49px
+    "major": $base-size * 3.815     // 61px
+);
+
+$leading: (
+    'loose': 1.5,
+    'tight': 1.2,
+    'flat': 1.12
+);
+
+$font-base: "Rubik", sans-serif;
+$font-sans: "Roboto Slab", sans-serif;
+
+ /**
+ * BREAKPOINTS
+ */
+$breakpoints:(
+    xs: 0,
+    s:  567px, // 480 pixel
+    m:  768px, // 768 pixels
+    l:  992px, // 1024 pixels
+    xl: 1200px, // 1280 pixels
+    xxl: 1400px // 1680 pixels
+)
