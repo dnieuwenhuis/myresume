@@ -1,0 +1,25 @@
+/**
+ * GENERATE BACKGROUND UTILITIES
+ *
+ * @param {string} $key - The name that you want to get
+ * @param {string} $color- The color that you want to get
+ *
+ */
+@each $key, $color in $colors {
+    .bg-#{$key} {
+        background: #{$color};
+    }
+}
+
+/**
+ * GENERATE COLOR UTILITIES
+ *
+ * @param {string} $key - The name that you want to get
+ * @param {string} $color- The color that you want to get
+ *
+ */
+@each $key, $color in $colors {
+    .color-#{$key} {
+        color: #{$color};
+    }
+}

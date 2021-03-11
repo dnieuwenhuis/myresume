@@ -1,0 +1,14 @@
+/**
+ * SIZES FUNCTION
+ *
+ * @param {string} $key - The size that you want to get
+ */
+
+@function get-size($key) {
+  @if map-has-key($sizes, $key) {
+    @return map-get($sizes, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $sizes.";
+  @return null;
+}

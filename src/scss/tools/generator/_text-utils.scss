@@ -1,0 +1,20 @@
+/**
+ * GENERATE TEXT CLASSES
+ *
+ * @param {string} $key - The name that you want to get
+ * @param {string} $size- The size that you want to get
+ *
+ */
+@each $key, $size in $sizes {
+    .text-#{$key} {
+        font-size: #{$size};
+    }
+
+    @each $name, $breakpoint in $breakpoints {
+        @media(min-width: $breakpoint) {
+            .text-#{$key}\@#{$name} {
+                font-size: #{$size};
+            }
+        }
+    }
+}
