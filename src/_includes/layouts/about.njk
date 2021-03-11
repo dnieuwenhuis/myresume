@@ -9,6 +9,7 @@
 
         {% if skills %}
         <section>
+            <div class="container">
             {% if skills.design %}
             <h2>{{ skills.design.title }}</h2>
             <ol>
@@ -31,25 +32,31 @@
                 {% endfor %}
             </ol>
             {% endif %}
+            </div>
         </section>
         {% endif %}
 
         {% if experience %}
         <section class="">
-            <h2>Werkervaring</h2>
-            {% set entries = experience %}
-            {% set microformat = "p-experience" %}
-            {% include "partials/entry-list.njk" %}
+            <div class="container">
+                <h2>Werkervaring</h2>
+                {% set entries = experience %}
+                {% set microformat = "p-experience" %}
+                {% include "partials/entry-list.njk" %}
+            </div>
         </section>
         {% endif %}
 
         {% if education %}
         <section class="">
-            <h2>Opleidingen</h2>
-            {% set entries = education %}
-            {% set microformat = "p-education" %}
-            {% include "partials/entry-list.njk" %}
+            <div class="container">
+                <h2>Opleidingen</h2>
+                {% set entries = education %}
+                {% set microformat = "p-education" %}
+                {% include "partials/entry-list.njk" %}
+            </div>
         </section>
         {% endif %}
     </article>
+    {% include "partials/cta.njk" %}
 {% endblock content %}

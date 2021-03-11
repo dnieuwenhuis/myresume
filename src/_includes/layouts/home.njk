@@ -2,6 +2,8 @@
 
 {% block content %}
     {% include "partials/hero.njk" %}
-    <hr />
+
     {{ content | safe }}
+
+    {% include "partials/cta.njk" %}
 {% endblock content %}
