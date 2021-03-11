@@ -1,0 +1,13 @@
+/**
+ * CONTAINER
+ * Sets a max width, adds a consisten gutter and horizontally
+ * centers the contents
+ */
+
+.container {
+  max-width: 70rem;
+  padding: 0 get-size('300');
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}

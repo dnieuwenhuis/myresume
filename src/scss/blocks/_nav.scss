@@ -1,0 +1,50 @@
+.nav {
+
+    &__btn {
+
+        .line {
+            background: get-color('black');
+            height: 2px;
+            width: 1.5rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include respond-max(m) {
+
+        &__list {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+			left: 0;
+			background-color: get-color('white');
+			z-index: 4;
+			transition: all .2s ease-out;
+			transform: translateX(100%);
+			flex-direction: column;
+			overflow: hidden;
+        }
+    }
+
+    @include respond-min(m) {
+
+        &__btn {
+            display: none;
+        }
+
+        &__list {
+            position: relative;
+            flex-direction: row;
+            transform: translateX(0);
+        }
+    }
+
+
+
+
+}

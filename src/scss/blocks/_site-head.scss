@@ -1,0 +1,12 @@
+.site-head {
+    padding: get-size('400') 0;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include respond-min(l) {
+        padding: get-size('600') 0;
+    }
+}
