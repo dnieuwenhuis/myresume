@@ -2,9 +2,13 @@
     <div class="container">
         <div class="site-head__inner">
             <p class="site-head__brand">
+                {%- if page.url == "/" -%}
+                {% include "partials/brand.svg" %}
+                {%- else -%}
                 <a href="/">
                     {% include "partials/brand.svg" %}
                 </a>
+                {%- endif -%}
             </p>
             {% include "partials/nav.njk" %}
     </div>

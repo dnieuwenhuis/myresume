@@ -6,6 +6,10 @@
         justify-content: space-between;
     }
 
+    a {
+        display: block;
+    }
+
     @include respond-min(l) {
         padding: get-size('600') 0;
     }
