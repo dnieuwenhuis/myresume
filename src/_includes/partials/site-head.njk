@@ -2,7 +2,9 @@
     <div class="container">
         <div class="site-head__inner">
             <p class="site-head__brand">
-                <a href="/">{{ site.name }}</a>
+                <a href="/">
+                    {% include "partials/brand.svg" %}
+                </a>
             </p>
             {% include "partials/nav.njk" %}
     </div>
