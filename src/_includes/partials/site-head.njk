@@ -4,21 +4,7 @@
             <p class="site-head__brand">
                 <a href="/">{{ site.name }}</a>
             </p>
-            <nav class="nav site-head__nav">
-                <button data-toggle data-toggle-options='{"blockScroll": true}' class="nav__btn" aria-expanded="false" aria-controls="drawer">
-                    <span class="u-visually-hidden">Menu</span>
-                    <span aria-hidden="true" class="line"></span>
-                    <span aria-hidden="true" class="line"></span>
-                    <span aria-hidden="true" class="line"></span>
-                </button>
-                <ol id="drawer" class="nav__list">
-                {%- for item in navigation.items %}
-                    <li>
-                        <a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}> {{ item.text }}</a>
-                    </li>
-                {%- endfor %}
-                </ol>
-            </nav>
+            {% include "partials/nav.njk" %}
     </div>
     </div>
 </header>

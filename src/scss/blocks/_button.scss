@@ -2,6 +2,22 @@
  * BUTTON
  */
 
+/**
+ * BUTTON RESET
+ *
+ */
+
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+
+    @media screen and (-ms-high-contrast: active) {
+        border: 2px solid currentcolor;
+    }
+}
+
 .button {
     border: none;
     background-color: get-color('primary');

@@ -1,33 +1,64 @@
 .nav {
 
     &__btn {
+        position:relative;
+        z-index: 5;
 
         .line {
+            display: block;
             background: get-color('black');
             height: 2px;
             width: 1.5rem;
+            margin: 4px auto;
+			transition: all 0.3s ease-in-out;
+        }
+
+        &[aria-expanded="true"] {
+
+            .line {
+
+                &:nth-child(3) {
+                    opacity: 0;
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(5px) rotate(45deg);
+                }
+
+                &:nth-child(4) {
+                    transform: translateY(-7px) rotate(-45deg);
+                }
+            }
         }
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
 
-    @include respond-max(m) {
+    a {
+        text-decoration: none;
+        position: relative;
+        font-size: get-size('700');
+        font-family: $font-display;
+        color: get-color('black');
+        display: block;
+    }
 
-        &__list {
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-			left: 0;
-			background-color: get-color('white');
-			z-index: 4;
-			transition: all .2s ease-out;
-			transform: translateX(100%);
-			flex-direction: column;
-			overflow: hidden;
+    &__drawer {
+        background-color: get-color('white');
+        padding-top: get-size('major');
+        // overflow: hidden;
+        @include position(fixed, $top: 0, $right: 0, $bottom: 0, $left: 0);
+        z-index: 4;
+        transition: all .2s ease-out;
+        transform: translateX(100%);
+
+        &.-is-active {
+            transform: translateY(0%);
         }
     }
 
@@ -37,14 +68,43 @@
             display: none;
         }
 
-        &__list {
+        &__drawer {
             position: relative;
             flex-direction: row;
             transform: translateX(0);
+            padding-top: 0;
+        }
+
+        &__list {
+            flex-direction: row;
+
+            > * {
+                margin-left: get-size('500');
+            }
+        }
+
+        a {
+            font-size: get-size('400');
+
+            // &:hover {
+
+            // }
+
+            // Adds the fake border to active state items
+            &[data-state='active'],
+            &[aria-current='page'] {
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 0.25rem;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    margin-top: 0.25rem;
+                    background: get-color('primary');
+                }
+            }
         }
     }
-
-
-
-
 }
