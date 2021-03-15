@@ -1,17 +1,11 @@
+{% if navigation.items %}
 <nav class="nav site-head__nav">
-    <button data-toggle data-toggle-options='{"blockScroll": true}' class="nav__btn" aria-expanded="false" aria-controls="drawer">
-        <span class="visually-hidden">Menu</span>
-        <span aria-hidden="true" class="line"></span>
-        <span aria-hidden="true" class="line"></span>
-        <span aria-hidden="true" class="line"></span>
-    </button>
-    <div id="drawer" class="nav__drawer">
-        <ol class="nav__list">
-        {%- for item in navigation.items %}
-            <li>
-                <a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}> {{ item.text }}</a>
-            </li>
-        {%- endfor %}
-        </ol>
-    </div>
+    <ol class="nav__list">
+    {%- for item in navigation.items %}
+        <li>
+            <a href="{{ item.url }}"{{ helpers.getLinkActiveState(item.url, page.url) | safe }}> {{ item.text }}</a>
+        </li>
+    {%- endfor %}
+    </ol>
 </nav>
+{% endif %}
